@@ -1,0 +1,53 @@
+﻿@using KinoAfisha.Models
+@model Film
+
+
+<table>
+    <tbody>
+        <tr>
+
+            <td>
+                <h1><u>@Model.NameFilm</u></h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <h3>Аннотация</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p>
+                    <span><b>Описание фильма</b></span>
+                    <span><pre style="width: auto; white-space: pre-wrap;">@Model.FilmDescription</pre></span>
+                </p>
+                <p>
+                    <span><b>Актеры</b></span>
+                    <span><pre style="width: auto; white-space: pre-wrap;">@Model.FilmAllActors</pre></span>
+                </p>
+                <p>
+                    <span><b>Дополнительно</b></span>
+                    <span><pre style="width: auto; white-space: pre-wrap;">@Model.FilmDop</pre></span>
+                </p>
+
+
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+@Html.ActionLink("К фильмам", "Index", "Films", null, new { @class = "btn btn-primary" })
+<br>
+<br>
+
+@Html.ActionLink("На главную", "Index", "Kinos", null, new { @class = "btn btn-primary" })
+
+
+<hr />
+
+
+<sub><i>Описание может быть не точным</i></sub>

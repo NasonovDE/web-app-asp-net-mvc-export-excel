@@ -1,0 +1,12 @@
+﻿@using KinoAfisha.Models
+@model ImportDisciplineLog
+
+<h3>Лог импорта фильмов</h3>
+
+
+@Html.EditorForModel()
+<div class="btn-create">
+    @Html.ActionLink("На главную", "Index", "Kinos", null, new { @class = "btn btn-dark" })
+    @Html.ActionLink("Назад", "Index", "Descriptions", null, new { @class = "btn btn-dark" })
+
+</div>

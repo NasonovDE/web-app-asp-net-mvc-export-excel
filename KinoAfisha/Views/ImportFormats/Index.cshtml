@@ -1,0 +1,16 @@
+﻿@using KinoAfisha.Models
+@model ImportDisciplineViewModel
+
+<br>
+<h1><b>Импорт кинокомпаний</b></h1>
+<br>
+
+@using (Html.BeginForm("Import", "ImportFormats", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.EditorForModel()
+
+    @Html.ActionLink("Пример файла", "GetExample", null, new { @class = "btn btn-secondary" })
+    <input type="submit" value="Сохранить" class="btn btn-secondary" />
+    @Html.ActionLink("Отменить", "Index", "Formats", null, new { @class = "btn btn-danger" })
+}
+
